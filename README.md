@@ -4,7 +4,6 @@ Playwright is one of the tools I have been playing around with the past year or 
 
 I figure I should get some tests created and pushed up to Github so here is my first Playwright repo. I will eventually be adding more tests as I work towards full coverage of this the test site https://www.saucedemo.com.
 
-
 ## Running the tests
 To run the tests, you will need to install NodeJS. 
 Once NodeJS is installed, install Playwright using `npm`:
@@ -27,3 +26,10 @@ The report of the latest run can be viewed with:
 $ npx playwright show-report
 ```
 This will generate the report in HTML format in the browser.
+
+### Tests in test suite
+Before and after execution of each test, the test logs in as `standard_user` and logs out of the application, respectively.
+* View product details
+* Add product to the cart through the product's detail page
+* Add product ot the cart through the store inventory page
+* Checkout
