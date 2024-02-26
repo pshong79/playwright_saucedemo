@@ -32,12 +32,14 @@ $ npx playwright show-report
 This will generate the report in HTML format in the browser.
 
 ### Tests in test suite
+#### standard_user
 Before and after execution of these tests, each test logs in as `standard_user` and logs out of the application, respectively.
 * View product details
 * Add product to the cart through the product's detail page
 * Add product ot the cart through the store inventory page
 * Checkout
 
+#### visual_user
 Similarly, before and after execution of these tests, each test logs in as `visual_user` and logs out of the application, respectively.
 
 To create your own expected snapshots, delete the files in the `visual_user.spec.js-snapshots` folder and follow the instructions in the `visual_user.spec.js` file.
