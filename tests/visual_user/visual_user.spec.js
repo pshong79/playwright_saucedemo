@@ -3,10 +3,10 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('visual_user', () => {
   test.beforeEach(async ({ page }) => {
-    // On the initial test run, `standard_user` must be used so that the initial, expected image
+    // On the initial test run, `standard_user` must be used so that the initial, expected snapshot
     // is saved.
-    // Then, run the tests using `visual_user`. This will use the expected image saved on the inital run
-    // and compare with the image taken during subsequent runs.
+    // Then, run the tests using `visual_user`. This will use the expected snapshot saved on the inital run
+    // and compare with the snapshot taken during subsequent runs.
 
     // More information can be found here: https://playwright.dev/docs/test-snapshots and 
     // https://playwright.dev/docs/api/class-pageassertions#page-assertions-to-have-screenshot-1
