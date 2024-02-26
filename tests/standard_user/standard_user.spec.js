@@ -27,13 +27,20 @@ test.describe('standard_user', () => {
     await expect(page.locator('.inventory_details_desc')).toHaveText(/It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office./);
   });
 
-  test('add product to cart', async ({ page }) => {
+  test('add product to cart by product details', async ({ page }) => {
     // Product = Test.allTheThings() T-Shirt (Red)
     await page.locator('#item_3_title_link').click();
     await expect(page.locator('.inventory_details_name')).toHaveText('Test.allTheThings() T-Shirt (Red)');
     
     await page.getByRole('button', { name: 'Add to cart' }).click();
     await expect(page.getByRole('button', { name: 'Remove' })).toHaveText(/Remove/);
+    await expect(page.locator('.shopping_cart_badge')).toHaveText(/1/);
+  })
+
+  test('add product to cart by inventory page', async ({ page }) => {
+    // Product = Sauce Labs Bike Light
+    await page.locator('#add-to-cart-sauce-labs-bike-light').click();
+    await expect(page.locator('#remove-sauce-labs-bike-light')).toHaveText(/Remove/);
     await expect(page.locator('.shopping_cart_badge')).toHaveText(/1/);
   })
 });
