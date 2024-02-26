@@ -6,9 +6,7 @@ I figure I should get some tests created and pushed up to Github so here is my f
 These tests are pretty basic. They test the end-to-end functionality of `standard_user` shopping in the `Swag Labs` store.
 
 I will be adding more tests as I work towards full coverage of this the test site https://www.saucedemo.com for `standard_user`.
-There are other users for this demo application; however, since `standard_user` has access to perform all the functions, the tests uses only this user.
-
-Eventually, tests using other users may be added if there is relavence to add them.
+These tests will only use `standard_user` and `visual_user` since both have access to perform all the functions. `standard_user` will test the primary/secondary workflows while `visual_user` will test the visual components and the "look and feel" of the page.
 
 ## Running the tests
 To run the tests, you will need to install NodeJS. 
@@ -34,8 +32,11 @@ $ npx playwright show-report
 This will generate the report in HTML format in the browser.
 
 ### Tests in test suite
-Before and after execution of each test, the test logs in as `standard_user` and logs out of the application, respectively.
+Before and after execution of these tests, each test logs in as `standard_user` and logs out of the application, respectively.
 * View product details
 * Add product to the cart through the product's detail page
 * Add product ot the cart through the store inventory page
 * Checkout
+
+Similarly, before and after execution of these tests, each test logs in as `visual_user` and logs out of the application, respectively.
+* Visual testing of inventory page
