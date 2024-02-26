@@ -3,7 +3,7 @@
 Playwright is one of the tools I have been playing around with the past year or so.
 
 I figure I should get some tests created and pushed up to Github so here is my first Playwright repo. 
-These tests are pretty basic. They test the end-to-end functionality of `standard_user` shopping in the `Swag Labs` store.
+These tests are pretty basic. They test the end-to-end functionality of `standard_user` shopping in the `Swag Labs` store and the visual components and the "look and feel" of the site using `visual_user`.
 
 I will be adding more tests as I work towards full coverage of this the test site https://www.saucedemo.com for `standard_user`.
 These tests will only use `standard_user` and `visual_user` since both have access to perform all the functions. `standard_user` will test the primary/secondary workflows while `visual_user` will test the visual components and the "look and feel" of the page.
