@@ -2,7 +2,13 @@
 
 Playwright is one of the tools I have been playing around with the past year or so.
 
-I figure I should get some tests created and pushed up to Github so here is my first Playwright repo. I will eventually be adding more tests as I work towards full coverage of this the test site https://www.saucedemo.com.
+I figure I should get some tests created and pushed up to Github so here is my first Playwright repo. 
+These tests are pretty basic. They test the end-to-end functionality of `standard_user` shopping in the `Swag Labs` store.
+
+I will be adding more tests as I work towards full coverage of this the test site https://www.saucedemo.com for `standard_user`.
+There are other users for this demo application; however, since `standard_user` has access to perform all the functions, the tests uses only this user.
+
+Eventually, tests using other users may be added if there is relavence to add them.
 
 ## Running the tests
 To run the tests, you will need to install NodeJS. 
