@@ -21,16 +21,21 @@ test.describe('standard_user', () => {
 
   test('view product details', async ({ page }) => {
     // Product = Sauce Labs Fleece Jacket
+    let product = /Sauce Labs Fleece Jacket/;
+    let product_description = /It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office./;
+    
     await page.locator('#item_5_title_link').click();
 
-    await expect(page.locator('.inventory_details_name')).toHaveText(/Sauce Labs Fleece Jacket/);
-    await expect(page.locator('.inventory_details_desc')).toHaveText(/It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office./);
+    await expect(page.locator('.inventory_details_name')).toHaveText(product);
+    await expect(page.locator('.inventory_details_desc')).toHaveText(product_description);
   });
 
   test('add product to cart by product details', async ({ page }) => {
     // Product = Test.allTheThings() T-Shirt (Red)
+    let product = 'Test.allTheThings() T-Shirt (Red)';
+    
     await page.locator('#item_3_title_link').click();
-    await expect(page.locator('.inventory_details_name')).toHaveText('Test.allTheThings() T-Shirt (Red)');
+    await expect(page.locator('.inventory_details_name')).toHaveText(product);
     
     await page.getByRole('button', { name: 'Add to cart' }).click();
     await expect(page.getByRole('button', { name: 'Remove' })).toHaveText(/Remove/);
