@@ -41,3 +41,4 @@ Before and after execution of these tests, each test logs in as `standard_user` 
 Similarly, before and after execution of these tests, each test logs in as `visual_user` and logs out of the application, respectively.
 To create your own expected snapshots, delete the files in the `visual_user.spec.js-snapshots` folder and follow the instructions in the 
 * Visual testing of inventory page
+* Visual testing of all product details pages
